@@ -9,7 +9,7 @@ Run the notebook using the free GoogleColab resources to use it. The image creat
 
 ## Parameters
 
-Look in the "Functions" section to see what you can use and modify while configuring the parameters. Although a lot of parameter combinations weren't used in the thesis, anyone is welcome to use and experiment with them.
+In the "Functions" section you can find many different functions used and which parameters to use and modify. Although a lot of parameter combinations weren't used in the thesis, anyone is welcome to use and experiment with them.
 
 ## Notes
 

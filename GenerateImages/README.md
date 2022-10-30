@@ -10,6 +10,7 @@ Run the notebook using the free GoogleColab resources to use it. The image creat
 ## Parameters
 
 In the "Functions" section you can find many different functions used and which parameters to use and modify. Although a lot of parameter combinations weren't used in the thesis, anyone is welcome to use and experiment with them.
+
 **DO NOT FORGET**, If you want to generate box plots without outliers, you need to put the boolean "showFliers" false. In Seaborn library, outliers is the same as fliers.
 
 ## Notes

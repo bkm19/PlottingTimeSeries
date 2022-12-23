@@ -213,19 +213,19 @@ for name in DATA_SET_NAMES:
   plots = "Boxplots"
 
   ############## With No Fliers ##############
-  #pathName = '/home/alunos.fc.ul.pt/fc51020/' + str(numberOfPlots) + '_' + plots.lower() + '_no_fliers' + '/'
-  #pathHistory = '/home/alunos.fc.ul.pt/fc51020/history/' + str(numberOfPlots) + '_' + plots.lower() + '_no_fliers' + '/' + name + '.csv'
+  #pathName = '/PATH_CHANGE/' + str(numberOfPlots) + '_' + plots.lower() + '_no_fliers' + '/'
+  #pathHistory = '/PATH_CHANGE/history/' + str(numberOfPlots) + '_' + plots.lower() + '_no_fliers' + '/' + name + '.csv'
 
-  pathName = '/home/alunos.fc.ul.pt/fc51020/' + str(numberOfPlots) + '_' + plots.lower() + '/'
-  pathHistory = '/home/alunos.fc.ul.pt/fc51020/history/' + str(numberOfPlots) + '_' + plots.lower() + '_' + name + '_history/'
+  pathName = '/PATH_CHANGE/' + str(numberOfPlots) + '_' + plots.lower() + '/'
+  pathHistory = '/PATH_CHANGE/history/' + str(numberOfPlots) + '_' + plots.lower() + '_' + name + '_history/'
 
   train_x = []
   test_x = []
 
   ################# LOAD DATASET #################
 
-  _, train_y = load_from_tsfile_to_dataframe("/home/alunos.fc.ul.pt/fc51020/Univariate_ts/" + name + "/" + name + "_TRAIN.ts")
-  _, test_y = load_from_tsfile_to_dataframe("/home/alunos.fc.ul.pt/fc51020/Univariate_ts/" + name + "/" + name + "_TEST.ts")
+  _, train_y = load_from_tsfile_to_dataframe("/PATH_CHANGE/Univariate_ts/" + name + "/" + name + "_TRAIN.ts")
+  _, test_y = load_from_tsfile_to_dataframe("/PATH_CHANGE/fc51020/Univariate_ts/" + name + "/" + name + "_TEST.ts")
 
   train_x = np.empty((len(train_y), 288, 432, 1), dtype=np.uint8)
   test_x = np.empty((len(test_y), 288, 432, 1), dtype=np.uint8)
@@ -277,7 +277,7 @@ for name in DATA_SET_NAMES:
 
   model_test = get_model(width, height, channels)
 
-  modelPath = "/home/alunos.fc.ul.pt/fc51020/saved_models/" + str(numberOfPlots) + '_' + plots.lower() + '_' + name + '_model.h5'
+  modelPath = "/PATH_CHANGE/saved_models/" + str(numberOfPlots) + '_' + plots.lower() + '_' + name + '_model.h5'
 
   callbacks = [
   #keras.callbacks.ReduceLROnPlateau(

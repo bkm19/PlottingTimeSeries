@@ -206,16 +206,16 @@ for name in DATA_SET_NAMES:
   print("Dataset name: ", name)
   start_time = time.time()
 
-  pathName = '/home/alunos.fc.ul.pt/fc51020/' + "DeepInsight" + '/'
-  pathHistory = '/home/alunos.fc.ul.pt/fc51020/history/' + "DeepInsight" + '_' + name + '_history/'
+  pathName = '/PATH_CHANGE/' + "DeepInsight" + '/'
+  pathHistory = '/PATH_CHANGE/history/' + "DeepInsight" + '_' + name + '_history/'
 
   train_x = []
   test_x = []
 
   ################# LOAD DATASET #################
 
-  _, train_y = load_from_tsfile_to_dataframe("/home/alunos.fc.ul.pt/fc51020/Univariate_ts/" + name + "/" + name + "_TRAIN.ts")
-  _, test_y = load_from_tsfile_to_dataframe("/home/alunos.fc.ul.pt/fc51020/Univariate_ts/" + name + "/" + name + "_TEST.ts")
+  _, train_y = load_from_tsfile_to_dataframe("/PATH_CHANGE/Univariate_ts/" + name + "/" + name + "_TRAIN.ts")
+  _, test_y = load_from_tsfile_to_dataframe("/PATH_CHANGE/Univariate_ts/" + name + "/" + name + "_TEST.ts")
 
   train_x = np.empty((len(train_y), 50, 50, 3), dtype=np.uint8)
   test_x = np.empty((len(test_y), 50, 50, 3), dtype=np.uint8)
@@ -267,7 +267,7 @@ for name in DATA_SET_NAMES:
 
   model_test = get_model(width, height, channels)
 
-  modelPath = "/home/alunos.fc.ul.pt/fc51020/saved_models/" + "DeepInsight" + '_' + name + '_model.h5'
+  modelPath = "/PATH_CHANGE/saved_models/" + "DeepInsight" + '_' + name + '_model.h5'
 
   callbacks = [
   #keras.callbacks.ReduceLROnPlateau(
